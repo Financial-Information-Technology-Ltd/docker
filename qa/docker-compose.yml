@@ -1,7 +1,10 @@
 version: '3.8'
 services:
   webapp:
-    build: ../../lifefit/java
+    build:
+      context: .
+      args:
+        - buildVersion: 186-alpha
     extra_hosts:
         - "bigfit:192.168.1.139"
         - "unifit:192.168.1.7"
